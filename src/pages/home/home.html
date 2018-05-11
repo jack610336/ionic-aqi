@@ -7,29 +7,63 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding  >
+<ion-content padding >
   <h3>AQI</h3>
 
   <p>
     this is an simple app for checking AQI index 
   </p>
+  <ion-grid >
+    <div class="row" style="width: 50px;"> 
+        <ion-card  class="col col-25" style=" background-color: green;" text-center>                 
+            <font face="微軟正黑體" color="#FFFFFF" style="font-size:20px">123</font>         
+         </ion-card>
+         <ion-card class="col col-25" style=" background-color: green;" text-center>                 
+            <font face="微軟正黑體" color="#FFFFFF" style="font-size:20px">123</font>         
+         </ion-card>
+         <ion-card class="col col-25" style=" background-color: green;" text-center>                 
+            <font face="微軟正黑體" color="#FFFFFF" style="font-size:20px">123</font>         
+         </ion-card>
+    </div>
+      <ion-row  >
+          
+           
+      </ion-row>
+      <ion-row >
+          <ion-col style=" height: 60px;"  padding-vertical  text-center>
+              <ion-card style=" height: 100%; background-color: green;">                 
+                 <font face="微軟正黑體" color="#FFFFFF" style="font-size:20px">123</font>         
+              </ion-card>
+          </ion-col>
+          <ion-col style=" height: 60px;"  padding-vertical  text-center>
+              <ion-card style=" height: 100%; background-color: green; " >                 
+                  <font face="微軟正黑體" color="#FFFFFF" style="font-size:20px">123</font>         
+               </ion-card>
+          </ion-col>
+          <ion-col style=" height: 60px;"  padding-vertical  text-center>
+              <ion-card style=" height: 100%; background-color: green; " >                 
+                  <font face="微軟正黑體" color="#FFFFFF" style="font-size:20px">123</font>         
+               </ion-card>
+          </ion-col>
+        </ion-row>
+  </ion-grid>
 
-  <ion-card   *ngFor="let item of items" style=" height: fit-content;"  [ngStyle]="{'background-color': slide}">
-            <div class="card-title" ng-repeat="phone in phones | filter:query">
-              <!-- {{phone.name}} -->
-              <!-- <p>{{phone.snippet}}</p> -->
-              <ion-row>
-                  <ion-col center text-center >                
-                     <font face="微軟正黑體" color="#FFFFFF" style="font-size:30px">{{item.title}}</font>
+
+  <ion-card   *ngFor="let item of items" style=" height: 15%;"  [ngStyle]="{'background-color': item.colorS}">
+              <ion-row padding-vertical>
+                  <ion-col  text-center >                
+                     <font face="微軟正黑體" color="#FFFFFF" style="font-size:20px">{{item.title}}</font>
                   </ion-col>
                   <!-- <ion-col center text-center>                   
                       <div><font face="Calibri" color="#FFFFFF" style="font-size:30px"></font></div>                  
                   </ion-col> -->
-                  <ion-col center text-center>
-                      <div><font face="微軟正黑體" color="#FFFFFF" style="font-size:30px" >{{item.note}}</font></div>
+                  
+                  <ion-col  center text-center >
+                      <div><font face="微軟正黑體" color="#FFFFFF" style="font-size:20px">AQI:</font>
+                        <font face="微軟正黑體" color="#FFFFFF" style="font-size:20px">{{item.AQI}}</font></div>
                   </ion-col>
                 </ion-row>
-            </div>     
+           
    </ion-card>
 
   <button ion-button secondary menuToggle>Toggle Menu</button>
