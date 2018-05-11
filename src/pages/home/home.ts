@@ -61,7 +61,7 @@ export class HomePage {
       else {
         this.slide ="#444444";
       }
-      this.items.push({title: this.posts[i].SiteName ,AQI: this.posts[i].AQI ,colorS: this.slide});
+      this.items.push({title: this.posts[i].SiteName ,AQI: this.posts[i].AQI ,colorS: "#FFFFF"});
 
       
 
